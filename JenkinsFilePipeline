@@ -11,17 +11,17 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                sh 'firebase deploy -P tic-tac-toe-testing --token "$FIREBASE_DEPLOY_TOKEN"'
+                sh 'firebase deploy -P tic-tac-toe-testing-356f2 --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
         stage('Staging') {
             steps {
-                sh 'firebase deploy -P tic-tac-toe-staging --token "$FIREBASE_DEPLOY_TOKEN"'
+                sh 'firebase deploy -P tic-tac-toe-staging-bcfd3 --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
         stage('Production') {
             steps {
-                sh 'firebase deploy -P tic-tac-toe-production --token "$FIREBASE_DEPLOY_TOKEN"'
+                sh 'firebase deploy -P tic-tac-toe-production-c7310 --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
     }
